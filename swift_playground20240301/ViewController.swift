@@ -40,16 +40,23 @@ class ViewController: UIViewController {
 
         }
     
-        @objc func button2Tapped() {
-            // button2を押すとhogeの中にfugaが入る
+        @IBAction func button2Tapped(sender: UIButton) {
+        
             self.hoge = "fuga"
-            //print(self.hoge)
             
-            // print(self.hoge) で "Optional(...)" の形式も出力されてしまうため、
-            // if letでfugaのみが出力されるようにした
-             if let unwrappedHoge = self.hoge {
-             print(unwrappedHoge)
-         }
+            if let unwrappedHoge = self.hoge {
+            print(unwrappedHoge)
+        }
+//        @objc func button2Tapped() {
+//            // button2を押すとhogeの中にfugaが入る
+//            self.hoge = "fuga"
+//            //print(self.hoge)
+//
+//            // print(self.hoge) で "Optional(...)" の形式も出力されてしまうため、
+//            // if letでfugaのみが出力されるようにした
+//             if let unwrappedHoge = self.hoge {
+//             print(unwrappedHoge)
+//         }
     }
 }
 
